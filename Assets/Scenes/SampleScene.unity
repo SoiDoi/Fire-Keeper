@@ -469,15 +469,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a82a35c8f3589147952cb7ac6b34efb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapWidth: 100
-  mapHeight: 100
-  noiseScale: 0.2
-  octaves: 4
-  persitance: 0.509
+  drawMode: 1
+  noiseScale: 25
+  octaves: 5
+  persitance: 0.5
   lacunarity: 2
-  seed: 65
+  seed: 151
   offset: {x: 4.92, y: 2.52}
   autoUpadate: 1
+  regions:
+  - name: water
+    height: 0.3
+    colour: {r: 0, g: 0.28465223, b: 1, a: 0}
+  - name: sand
+    height: 0.5
+    colour: {r: 0.6320754, g: 0.60469997, b: 0.33094516, a: 0}
+  - name: dirt
+    height: 0.6
+    colour: {r: 0.4339623, g: 0.32777247, b: 0.14124244, a: 0}
+  - name: Grass
+    height: 0.8
+    colour: {r: 0, g: 0.3490566, b: 0.085845806, a: 0}
+  - name: stone
+    height: 1
+    colour: {r: 0.43529415, g: 0.43529415, b: 0.43529415, a: 0}
 --- !u!4 &1444090887
 Transform:
   m_ObjectHideFlags: 0

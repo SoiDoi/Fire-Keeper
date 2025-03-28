@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class MapGenerator : MonoBehaviour
 {
-    public int mapWidth;
-    public int mapHeight;
+    public enum DrawMode { NoiseMap,ColourMap};
+    public DrawMode drawMode;
+
+    const int mapChunkSize = 256;
     public float noiseScale;
 
     public int octaves;
@@ -16,24 +18,41 @@ public class MapGenerator : MonoBehaviour
 
     public bool autoUpadate;
 
+    public TerrainType[] regions;
+
     public void GenerateMap() // Use for Compile noise map to terrain map
     {
-        float[,] noiseMap = Noise.GenerateNoiseMap(mapWidth, mapHeight,seed, noiseScale,octaves,persitance,lacunarity,offset);
+        float[,] noiseMap = Noise.GenerateNoiseMap(mapChunkSize, mapChunkSize, seed, noiseScale,octaves,persitance,lacunarity,offset);
 
+        Color[] colourMap = new Color[mapChunkSize * mapChunkSize];
+        for (int y = 0; y < mapChunkSize; y++)
+        {
+            for (int x = 0; x < mapChunkSize; x++)
+            {
+                float currentHeight = noiseMap[x, y];
+                for (int i = 0; i < regions.Length; i++)
+                {
+                    if (currentHeight <= regions[i].height)
+                    {
+                        colourMap[y * mapChunkSize + x] = regions[i].colour;
+                        break;
+                    }
+                }
+            }
+        }
         MapDisplay display = FindAnyObjectByType<MapDisplay>();
-        display.DrawNoiseMap(noiseMap);
+        if (drawMode == DrawMode.NoiseMap)
+        {
+            display.DrawTexture(TextureGenerator.TextureFromHeightMap(noiseMap));
+        }
+        else if (drawMode == DrawMode.ColourMap)
+        {
+            display.DrawTexture(TextureGenerator.TextureFromColourMap(colourMap, mapChunkSize, mapChunkSize));
+        }
     }
 
     private void OnValidate()
     {
-        if (mapWidth < 1)
-        {
-            mapWidth = 1;
-        }
-        if (mapHeight < 1)
-        {
-            mapHeight = 1;
-        }
         if (lacunarity < 1)
         {
             lacunarity = 1;
@@ -47,4 +66,13 @@ public class MapGenerator : MonoBehaviour
             noiseScale = 0.01f;
         }
     }
+}
+
+
+[System.Serializable]
+public struct TerrainType
+{
+    public string name;
+    public float height;
+    public Color colour;
 }
