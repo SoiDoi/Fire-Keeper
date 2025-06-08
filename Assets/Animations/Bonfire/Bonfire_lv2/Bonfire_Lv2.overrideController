@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Bonfire_Lv2
+  m_Controller: {fileID: 9100000, guid: e0516672cdf28584aa384d42b79627d9, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 6b83ebb169f9e994ba82836d0b5ca79e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f6416bb796aa90247994c4c9d20b6d3f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 41285e0e0b34e994b8e7fc7799fe26c6, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4f5ab4852e042014c9ca6dffdadc102a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c37afeb342472324d9c6bc4908c0ee0a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: bfe7b849e1f05014aa253868cd8ff38a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 913899b95a3905e49b1c7193a35a354b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e2045f94a4648e14e961f5aa14198560, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c5635b40c1e2cc84399188d93e00dc88, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: cc64866856f212945a53e093b003d13d, type: 2}

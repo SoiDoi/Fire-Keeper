@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2832965705407282644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3513927415949098789}
+  - component: {fileID: 9071972246151240191}
+  m_Layer: 0
+  m_Name: MapGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3513927415949098789
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2832965705407282644}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9071972246151240191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2832965705407282644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c797a061c784794ea236c076fa88af3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelOfDetail: 1
+  noiseScale: 64
+  octaves: 4
+  persistence: 0
+  lacunarity: 3
+  seed: 25508
+  offset: {x: 0, y: 0}
+  Ground_Tile: {fileID: 0}
+  Build_Tile: {fileID: 0}
+  waterTile: {fileID: 11400000, guid: 2675fcad364b5c243b6eca728caa5dc1, type: 2}
+  dirtTile: {fileID: 11400000, guid: c154e03b0e963a7499a08824725b09f5, type: 2}
+  stoneTile: {fileID: 11400000, guid: c1dd5457883f0eb4799b406ba3c0661d, type: 2}

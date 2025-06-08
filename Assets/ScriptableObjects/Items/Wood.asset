@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34cf1f4d1c8784842b447780093ba1c9, type: 3}
+  m_Name: Wood
+  m_EditorClassIdentifier: 
+  itemID: mt01
+  itemName: Wood
+  itemImage: {fileID: 1729840402284382006, guid: 8034551eddf05f84a898a3f9f5fafef3, type: 3}
+  itemBrokenImage: {fileID: 0}
+  itemType: 5
+  weaponAttackDamage: 0
+  consumableHealingPoint: 20
+  itemMaxStackSize: 10
+  itemMaximumDurability: 0
+  itemDescription: Can fuel for bonfire
+  itemPrefab: {fileID: 0}
+  itemTile: {fileID: 0}

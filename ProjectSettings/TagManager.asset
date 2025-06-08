@@ -2,8 +2,16 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - Item
+  - Fire
+  - ItemDrop
+  - Enemy
+  - MusicToggle
+  - MusicSlider
+  - SFXToggle
+  - SFXSlider
   layers:
   - Default
   - TransparentFX
@@ -11,8 +19,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Player
+  - Items
   - 
   - 
   - 
@@ -41,3 +49,26 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: GroundLayer
+    uniqueID: 1706349811
+    locked: 0
+  - name: SnowLayer
+    uniqueID: 3330146367
+    locked: 0
+  - name: BuildBehindLayer
+    uniqueID: 2824368071
+    locked: 0
+  - name: ItemsBehindLayer
+    uniqueID: 2826768409
+    locked: 0
+  - name: PlayerLayer
+    uniqueID: 1469891835
+    locked: 0
+  - name: ItemsFrontLayer
+    uniqueID: 3162337709
+    locked: 0
+  - name: BuildFrontLayer
+    uniqueID: 4171696641
+    locked: 0
+  m_RenderingLayers:
+  - Default
